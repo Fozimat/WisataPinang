@@ -30,11 +30,13 @@
             android:textSize="16sp"
             android:textStyle="bold"
             tools:text="@string/wisata_name" />
+
         <TextView
             android:id="@+id/tv_item_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ellipsize="end"
+            android:fontFamily="sans-serif-condensed-light"
             android:maxLines="2"
             tools:text="@string/detail" />
         <LinearLayout
@@ -44,17 +46,22 @@
             android:layout_toEndOf="@id/img_item_photo"
             android:layout_toRightOf="@id/img_item_photo"
             android:orientation="horizontal">
-        <Button
-            android:id="@+id/btn_fav"
-            android:layout_width="100dp"
-            android:layout_marginRight="10dp"
-            android:layout_height="40dp"
-            android:text="Favorit" />
+
+            <Button
+                android:id="@+id/btn_fav"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:text="Favorit"
+                android:textSize="12sp"
+                android:backgroundTint="#f75482"/>
         <Button
             android:id="@+id/btn_share"
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:text="Share" />
+            android:text="Share"
+            android:textSize="12sp"
+            android:backgroundTint="#f75482"/>
         </LinearLayout>
     </LinearLayout>
 

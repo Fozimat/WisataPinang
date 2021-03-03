@@ -9,8 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WisataPinang">
-        <activity android:name=".DetailActivity"></activity>
-        <activity android:name=".AboutActivity" />
+        <activity android:name=".DetailActivity"
+            android:label="Detail Wisata">
+        </activity>
+        <activity android:name=".AboutActivity"
+            android:label="About"/>
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
@@ -20,7 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:label="Wisata Pinang"/>
     </application>
 
 </manifest>

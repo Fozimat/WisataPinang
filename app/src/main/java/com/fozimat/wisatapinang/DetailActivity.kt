@@ -32,7 +32,7 @@ class DetailActivity : AppCompatActivity() {
             .apply(RequestOptions().override(600, 600))
             .into(tvPhoto)
 
-        tvName.text = "Nama : $name"
-        tvDetail.text = "Detail : $detail"
+        tvName.text = name
+        tvDetail.text = detail
     }
 }

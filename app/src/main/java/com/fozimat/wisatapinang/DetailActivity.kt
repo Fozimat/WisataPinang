@@ -2,12 +2,13 @@ package com.fozimat.wisatapinang
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.fozimat.wisatapinang.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityDetailBinding
 
     companion object{
         const val EXTRA_NAME = "extra_name"
@@ -17,11 +18,8 @@ class DetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail)
-
-        val tvName: TextView = findViewById(R.id.tv_name)
-        val tvDetail: TextView = findViewById(R.id.tv_detail)
-        val tvPhoto: ImageView = findViewById(R.id.tv_photo)
+        binding = ActivityDetailBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val name = intent.getStringExtra(EXTRA_NAME)
         val detail = intent.getStringExtra(EXTRA_DETAIL)
@@ -30,9 +28,9 @@ class DetailActivity : AppCompatActivity() {
         Glide.with(this)
             .load(photo)
             .apply(RequestOptions().override(600, 600))
-            .into(tvPhoto)
+            .into(binding.tvPhoto)
 
-        tvName.text = name
-        tvDetail.text = detail
+        binding.tvName.text = name
+        binding.tvDetail.text = detail
     }
 }
